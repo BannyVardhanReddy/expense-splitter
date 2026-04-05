@@ -1,0 +1,13 @@
+function PersonList({persons}){
+    return(
+        <ul>
+        {persons.map((person)=>{
+            return(
+                <li key={person.id}>{person.name}</li>
+            )
+        })}
+        </ul>
+    )
+}
+
+export default PersonList;
