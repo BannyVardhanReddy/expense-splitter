@@ -15,16 +15,17 @@ function AddPerson({persons,setPersons}) {
     setName('')
   }
   return (
-    <div>
-      <input
-        placeholder="Add a person"
-        value={name}
-        onChange={handleOnChange}
-      ></input>
-      <button
-        onClick={handleOnClick}
-      >Add</button>
-    </div>
+    <section className="card">
+      <h2>Add Person</h2>
+      <div className="person-row">
+        <input
+          placeholder="Add a person"
+          value={name}
+          onChange={handleOnChange}
+        />
+        <button onClick={handleOnClick}>Add</button>
+      </div>
+    </section>
   );
 }
 

@@ -35,29 +35,32 @@ function AddExpense({ expenses, setExpenses, persons }) {
     }
 
     return (
-        <form onSubmit={handleOnSubmit}>
-            <input
-                placeholder="Description"
-                name="description"
-                onChange={handleOnChange}
-                value={form.description}
-            />
-            <input
-                placeholder="Amount to be split"
-                name="amount"
-                onChange={handleOnChange}
-                value={form.amount}
-            />
-            <select name="paidBy" onChange={handleOnChange} value={form.paidBy}>
-                <option value="">Select who paid</option>
-                {persons.map((person) => (
-                    <option key={person.id} value={person.name}>
-                        {person.name}
-                    </option>
-                ))}
-            </select>
-            <button type="submit">Submit</button>
-        </form>
+        <section className="card">
+            <h2>Add Expense</h2>
+            <form className="stack" onSubmit={handleOnSubmit}>
+                <input
+                    placeholder="Description"
+                    name="description"
+                    onChange={handleOnChange}
+                    value={form.description}
+                />
+                <input
+                    placeholder="Amount to be split"
+                    name="amount"
+                    onChange={handleOnChange}
+                    value={form.amount}
+                />
+                <select name="paidBy" onChange={handleOnChange} value={form.paidBy}>
+                    <option value="">Select who paid</option>
+                    {persons.map((person) => (
+                        <option key={person.id} value={person.name}>
+                            {person.name}
+                        </option>
+                    ))}
+                </select>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
     );
 }
 
